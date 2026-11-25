@@ -49,6 +49,11 @@ c = get_colors()
 
 # ── Chargement des données de production ─────────────────────────
 df = load_data(st.session_state.get("app_currency", "MAD"))
+
+if df.empty or "Date" not in df.columns:
+    st.error("Impossible de charger les données de production. Vérifiez que le fichier CSV existe et contient les colonnes requises.")
+    st.stop()
+
 stats = get_summary_stats(df)
 
 # ═══════════════════════════════════════════════════════════════
