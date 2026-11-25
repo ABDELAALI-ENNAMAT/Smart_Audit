@@ -1,0 +1,345 @@
+/* ═════════════════════════════════════════════════════════════
+   SmartAudit — Design System CSS
+   Gold-and-White Professional Theme
+   ═════════════════════════════════════════════════════════════ */
+
+/* ── Hide Streamlit defaults ─────────────────────────────── */
+#MainMenu, footer, header { visibility: hidden !important; }
+.stDeployButton { display: none !important; }
+
+/* ── Base Typography ─────────────────────────────────────── */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.main .block-container {
+    padding: 1.5rem 2rem !important;
+    max-width: 1400px !important;
+}
+
+/* ── KPI Cards — Gold Accent ────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .kpi-card {
+    background: #FFFFFF !important;
+    border: 1px solid #EEEBE5 !important;
+    border-radius: 14px !important;
+    padding: 1.2rem 1.4rem !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin-bottom: 0.5rem !important;
+}
+div[data-testid="stMarkdownContainer"] .kpi-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04) !important;
+    transform: translateY(-2px) !important;
+}
+
+div[data-testid="stMarkdownContainer"] .kpi-label {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #7A8094 !important;
+    margin-bottom: 4px !important;
+}
+
+div[data-testid="stMarkdownContainer"] .kpi-value {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    color: #1A1D23 !important;
+    margin-bottom: 6px !important;
+}
+
+div[data-testid="stMarkdownContainer"] .kpi-delta {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    padding: 3px 10px !important;
+    border-radius: 20px !important;
+}
+div[data-testid="stMarkdownContainer"] .kpi-delta-up {
+    background: #EDF7F1 !important;
+    color: #2D7A52 !important;
+}
+div[data-testid="stMarkdownContainer"] .kpi-delta-down {
+    background: #FDF0EF !important;
+    color: #C0453B !important;
+}
+
+/* ── Section Title ───────────────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .section-title {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #1A1D23 !important;
+    margin: 1.5rem 0 0.75rem 0 !important;
+    padding-bottom: 8px !important;
+    border-bottom: 2px solid #005EB8 !important;
+    display: inline-block !important;
+}
+
+/* ── Badges — Semantic Colors ────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .badge {
+    padding: 3px 12px !important;
+    border-radius: 20px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    letter-spacing: 0.02em !important;
+}
+div[data-testid="stMarkdownContainer"] .badge-success { background: #EDF7F1 !important; color: #2D7A52 !important; }
+div[data-testid="stMarkdownContainer"] .badge-warning { background: #FFF8EC !important; color: #9A6B1A !important; }
+div[data-testid="stMarkdownContainer"] .badge-danger  { background: #FDF0EF !important; color: #C0453B !important; }
+div[data-testid="stMarkdownContainer"] .badge-info    { background: #EEF4FF !important; color: #3A5FA8 !important; }
+
+/* ── Finding Card ────────────────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .finding-card {
+    background: #FFFFFF !important;
+    border: 1px solid #EEEBE5 !important;
+    border-radius: 12px !important;
+    padding: 1.2rem 1.5rem !important;
+    margin-bottom: 1rem !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+    transition: all 0.25s ease !important;
+}
+div[data-testid="stMarkdownContainer"] .finding-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    transform: translateY(-1px) !important;
+}
+div[data-testid="stMarkdownContainer"] .finding-title {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #1A1D23 !important;
+    margin-bottom: 8px !important;
+}
+div[data-testid="stMarkdownContainer"] .finding-section {
+    margin-bottom: 6px !important;
+}
+div[data-testid="stMarkdownContainer"] .finding-label {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    color: #A0A6B4 !important;
+}
+div[data-testid="stMarkdownContainer"] .finding-content {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: #7A8094 !important;
+}
+div[data-testid="stMarkdownContainer"] .finding-impact {
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+div[data-testid="stMarkdownContainer"] .finding-responsible {
+    display: inline-block !important;
+    padding: 2px 10px !important;
+    border-radius: 12px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    background: rgba(201,169,110,0.12) !important;
+    color: #A67C3D !important;
+}
+
+/* ── Cycle Step Pill ─────────────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .cycle-step {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+    cursor: default !important;
+}
+
+/* ── App Footer ──────────────────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .app-footer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 0 !important;
+    margin-top: 2rem !important;
+    font-size: 12px !important;
+    color: #A0A6B4 !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    border-top: 1px solid #EEEBE5 !important;
+}
+
+/* ── Page Header Pattern ─────────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .page-header-block h1 {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: #1A1D23 !important;
+    margin: 0 !important;
+    line-height: 1.3 !important;
+}
+div[data-testid="stMarkdownContainer"] .page-header-block .subtitle {
+    font-size: 13px !important;
+    color: #7A8094 !important;
+    margin-top: 2px !important;
+}
+div[data-testid="stMarkdownContainer"] .page-header-gradient {
+    height: 3px !important;
+    background: linear-gradient(90deg, #005EB8, #00A3E0, #38BDF8) !important;
+    border-radius: 2px !important;
+    margin: 0.6rem 0 1rem 0 !important;
+}
+
+/* ── Cycle container ─────────────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .cycle-container {
+    display: flex !important;
+    gap: 6px !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+}
+
+/* ── Scrollbar (Webkit) ──────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #DDD9D1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #A0A6B4;
+}
+
+/* ── Plotly Chart Container ──────────────────────────────── */
+[data-testid="stPlotlyChart"] {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: transparent !important;
+}
+[data-testid="stPlotlyChart"] > div {
+    background: transparent !important;
+}
+
+/* ── st.metric — Gold Accents ────────────────────────────── */
+[data-testid="stMetric"] {
+    background: #FFFFFF !important;
+    border: 1px solid #EEEBE5 !important;
+    border-radius: 14px !important;
+    padding: 1rem !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+}
+[data-testid="stMetricLabel"] {
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #7A8094 !important;
+}
+[data-testid="stMetricValue"] {
+    font-weight: 700 !important;
+    color: #1A1D23 !important;
+}
+
+/* ── Download Buttons ────────────────────────────────────── */
+[data-testid="stDownloadButton"] > button {
+    background: #005EB8 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 0.5rem 1.5rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s !important;
+}
+[data-testid="stDownloadButton"] > button:hover {
+    background: #A67C3D !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ── Tabs ────────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px !important;
+    border-bottom-color: #EEEBE5 !important;
+}
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px !important;
+    padding: 6px 16px !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    color: #7A8094 !important;
+}
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    color: #005EB8 !important;
+}
+
+/* ── Logo Badge ──────────────────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .logo-badge {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    padding: 8px 0 !important;
+    margin-bottom: 12px !important;
+    letter-spacing: -0.02em !important;
+    color: #005EB8 !important;
+}
+
+/* ── Sensitivity Table ───────────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .sensitivity-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 0.5rem 0 !important;
+}
+div[data-testid="stMarkdownContainer"] .sensitivity-table th,
+div[data-testid="stMarkdownContainer"] .sensitivity-table td {
+    padding: 8px 12px !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    border-bottom: 1px solid #EEEBE5 !important;
+}
+div[data-testid="stMarkdownContainer"] .sensitivity-table th {
+    color: #7A8094 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    background: #F8F6F2 !important;
+}
+
+/* ── Skeleton Loading ────────────────────────────────────── */
+@keyframes skeleton-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+.skeleton {
+    background: #EEEBE5 !important;
+    border-radius: 6px !important;
+    animation: skeleton-pulse 1.5s ease-in-out infinite !important;
+}
+
+/* ── Circular Gauge Container ────────────────────────────── */
+div[data-testid="stMarkdownContainer"] .gauge-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 1rem !important;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1200px) {
+    div[data-testid="stMarkdownContainer"] .kpi-value { font-size: 24px !important; }
+    div[data-testid="stMarkdownContainer"] .kpi-label { font-size: 10px !important; }
+    div[data-testid="stMarkdownContainer"] .app-footer { flex-direction: column !important; text-align: center !important; }
+}
+
+/* ── Sidebar Nav Text Colors ── */
+[data-testid="stSidebarNav"] span {
+    color: #94A8C4 !important;
+}
+[data-testid="stSidebarNav"] div[data-testid="stSidebarNavItems"] li div:hover span {
+    color: #FFFFFF !important;
+}
+[data-testid="stSidebarNav"] div[data-testid="stSidebarNavItems"] li div[data-testid="stSidebarNavLinkActive"] span {
+    color: #FFFFFF !important;
+}

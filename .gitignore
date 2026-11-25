@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment variables
+.env
+
+# Data files (too large for git)
+data/*.csv
+
+# Trained models (regenerated via train_models.py)
+models/*.pkl
+models/model_metadata.json
+
+# Logs and output
+*.log
+output.txt
+
+# Streamlit
+.streamlit/secrets.toml
