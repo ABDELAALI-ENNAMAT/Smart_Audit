@@ -28,11 +28,7 @@ desktop.ini
 # Environment variables
 .env
 
-# Data files (too large for git)
-data/*.csv
-
-# Trained models (regenerated via train_models.py)
-models/*.pkl
+# Model metadata (regenerated during training)
 models/model_metadata.json
 
 # Logs and output

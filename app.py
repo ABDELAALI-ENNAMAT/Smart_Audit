@@ -12,6 +12,16 @@ from datetime import datetime
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT_DIR)
 
+# ── Entraînement automatique des modèles si absents ─────────────
+_model_dir = os.path.join(ROOT_DIR, "models")
+_required_models = ["oee_rf_model.pkl", "oee_xgb_model.pkl", "feature_names.pkl", "encoders.pkl"]
+if not all(os.path.exists(os.path.join(_model_dir, m)) for m in _required_models):
+    import subprocess
+    subprocess.run(
+        [sys.executable, os.path.join(_model_dir, "train_models.py")],
+        cwd=ROOT_DIR, check=True
+    )
+
 # ── Configuration de la page ──────────────────────────────────────
 favicon_path = os.path.join(ROOT_DIR, "assets", "favicon.ico")
 st.set_page_config(
